@@ -1,0 +1,103 @@
+<HTML>
+<header>
+<title>account_link - Table</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</header>
+<body>
+<div class="logo">
+<p>fitnes_portal</p>
+</div>
+<div class="horzMenu">
+<a class="horzMenu" href="../index.html"> Home</a><a class="horzMenu" href="../tables/index.html">Tables</a><a class="horzMenu" href="../schemas/index.html">Schemas</a><a class="horzMenu" href="../diagrams/index.html">Diagrams</a><a class="horzMenu" href="../foreignKeys/index.html">Foreign Keys</a><a class="horzMenu" href="../indexes/index.html">Indexes</a>
+</div>
+<h1>Table: account_link</h1>
+<div class="paragraph">
+<p>Таблица связи для счетов клиентов и продавцов</p>
+</div>
+<h2>Columns</h2>
+<table class="flat">
+<tr class="altRow">
+<td class="header">PK</td><td class="header">Name</td><td class="header">Data Type</td><td class="header">NULL</td><td class="header">Auto</td><td class="header">Default</td><td class="header">Comment</td><td class="header">FK</td>
+</tr>
+<tr>
+<td class="PkCol">
+<p class="boolImg">
+<img src="../images/pkb16.gif"></p>
+</td><td class="PkCol"><a href="../columns/public_account_link_id.html">id</a></td><td class="PkCol">BigInt</td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol"> </td><td class="PkCol">Первичный ключ для таблицы</td><td class="PkCol"> </td>
+</tr>
+<tr class="altRow">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/public_account_link_account_id.html">account_id</a></td><td class="FkCol">BigInt</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Вторичный ключ для связи с таблицей account</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
+</tr>
+<tr>
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/public_account_link_customer_id.html">customer_id</a></td><td class="FkCol">UUID</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Вторичный ключ для связи с таблицей customer</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
+</tr>
+<tr class="altRow">
+<td class="FkCol"> </td><td class="FkCol"><a href="../columns/public_account_link_seller_id.html">seller_id</a></td><td class="FkCol">UUID</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td><td class="FkCol"> </td><td class="FkCol"> </td><td class="FkCol">Вторичный ключ для связи с таблицей seller</td><td class="FkCol">
+<p class="boolImg">
+<img src="../images/ok12d.gif"></p>
+</td>
+</tr>
+<tr>
+<td> </td><td><a href="../columns/public_account_link_createdAt.html">createdAt</a></td><td>TimeStamp</td><td> </td><td> </td><td> </td><td>Дата создания записи</td><td> </td>
+</tr>
+<tr class="altRow">
+<td> </td><td><a href="../columns/public_account_link_updatedAt.html">updatedAt</a></td><td>TimeStamp</td><td> </td><td> </td><td> </td><td>Дата обновления записи</td><td> </td>
+</tr>
+</table>
+<br>
+<h2>Indexes</h2>
+<table class="flat">
+<tr>
+<td class="header">Name</td><td class="header">Table</td><td class="header">Columns</td><td class="header">Unique</td><td class="header">Clustered</td>
+</tr>
+<tr>
+<td><a href="../indexes/public_account_link_account_link_account_idx.html">account_link_account_idx</a></td><td><a href="../tables/public_account_link.html">account_link</a></td><td>account_id</td><td> </td><td> </td>
+</tr>
+<tr>
+<td><a href="../indexes/public_account_link_account_link_customer_idx.html">account_link_customer_idx</a></td><td><a href="../tables/public_account_link.html">account_link</a></td><td>customer_id</td><td> </td><td> </td>
+</tr>
+<tr>
+<td><a href="../indexes/public_account_link_account_link_seller_idx.html">account_link_seller_idx</a></td><td><a href="../tables/public_account_link.html">account_link</a></td><td>seller_id</td><td> </td><td> </td>
+</tr>
+</table>
+<br>
+<h2>Foreign Keys</h2>
+<table class="flat">
+<tr>
+<td class="header">Name</td><td class="header">Parent Table</td><td class="header">Child Table</td><td class="header">Parent Columns</td><td class="header">Child Columns</td>
+</tr>
+<tr>
+<td><a href="../foreignKeys/public_account_link_FK_110.html">FK_110</a></td><td><a href="../tables/public_account.html">account</a></td><td><a href="../tables/public_account_link.html">account_link</a></td><td>id</td><td>account_id</td>
+</tr>
+<tr>
+<td><a href="../foreignKeys/public_account_link_FK_113.html">FK_113</a></td><td><a href="../tables/public_customer.html">customer</a></td><td><a href="../tables/public_account_link.html">account_link</a></td><td>id</td><td>customer_id</td>
+</tr>
+<tr>
+<td><a href="../foreignKeys/public_account_link_FK_119.html">FK_119</a></td><td><a href="../tables/public_seller.html">seller</a></td><td><a href="../tables/public_account_link.html">account_link</a></td><td>id</td><td>seller_id</td>
+</tr>
+</table>
+<br>
+<h2>Used in Diagrams</h2>
+<table class="flat">
+<tr>
+<td class="header">Diagram Name</td>
+</tr>
+<tr>
+<td><a href="../diagrams/Fitnes_portal_diagram.html">Fitnes_portal_diagram</a></td>
+</tr>
+</table>
+</body>
+</HTML>
