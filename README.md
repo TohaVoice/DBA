@@ -7,7 +7,7 @@
 <p><span style="font-size:24px"><strong>Фитнес портал</strong></span></p>
 
 <p><br />
-С документацией можно ознакомиться открыв <strong>documentation/index.html</strong><br />
+С документацией можно ознакомиться открыв <strong>otus-2021-2-DB/fitness_portal/documentation/index.html</strong><br />
 Схема<strong> sheme.png</strong></p>
 
 <p>Проект базы данных для интернет магазина фитнес продукции<br />
